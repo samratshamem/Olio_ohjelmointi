@@ -1,0 +1,23 @@
+﻿<Window x:Class="MuistiinpanoSovellus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MuistiinpanoSovellus" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="MuistiinpanoTextBox" Grid.Row="0" Margin="10" VerticalAlignment="Top"
+                 Text="Kirjoita uusi muistiinpano tähän"/>
+
+        <ListBox x:Name="MuistiinpanoListBox" Grid.Row="1" Margin="10" 
+                 ItemsSource="{Binding}" DisplayMemberPath="Teksti"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="Lisää" Width="100" Click="LisaaMuistiinpanoButton_Click"/>
+            <Button Content="Poista" Width="100" Click="PoistaMuistiinpanoButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

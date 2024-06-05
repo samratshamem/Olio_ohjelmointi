@@ -1,0 +1,16 @@
+﻿<Window x:Class="TalonHallintaSovellus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TalonHallintaSovellus" Height="350" Width="525">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Lämpötila:"/>
+            <Slider x:Name="LämpötilaSäädin" Minimum="0" Maximum="30" ValueChanged="LämpötilaSäädin_ValueChanged"/>
+            <TextBlock Text="{Binding ElementName=LämpötilaSäädin, Path=Value}"/>
+
+            <Button x:Name="KeittiöValotNappi" Content="Keittiön valot" Click="KeittiöValotNappi_Click"/>
+            <Button x:Name="OlohuoneenValotNappi" Content="Olohuoneen valot" Click="OlohuoneenValotNappi_Click"/>
+            <Button x:Name="OviNappi" Content="Oven tila" Click="OviNappi_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

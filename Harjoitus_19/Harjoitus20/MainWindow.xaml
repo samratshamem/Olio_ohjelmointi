@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfStudent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Opiskelija" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical">
+            <Label Content="Etunimi:"/>
+            <TextBox Name="txtFirstName"/>
+            <Label Content="Sukunimi:"/>
+            <TextBox Name="txtLastName"/>
+            <Label Content="OpiskelijaID:"/>
+            <TextBox Name="txtStudentID"/>
+            <Label Content="Sähköposti:"/>
+            <TextBox Name="txtEmail"/>
+            <Label Content="Puhelinnumero:"/>
+            <TextBox Name="txtPhoneNumber"/>
+            <Button Content="Tallenna" Click="btnSave_Click"/>
+            <Button Content="Lataa" Click="btnLoad_Click"/>
+        </StackPanel>
+
+        <ListBox Grid.Row="0" Grid.Column="1" Name="lstStudents"/>
+    </Grid>
+</Window>

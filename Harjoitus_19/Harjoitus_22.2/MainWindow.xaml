@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfWindowArea.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ikkunan pinta-ala" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical">
+            <Label Content="Leveys (mm):"/>
+            <TextBox Name="txtWidth"/>
+            <Label Content="Korkeus (mm):"/>
+            <TextBox Name="txtHeight"/>
+            <Label Content="Karmin leveys (mm):"/>
+            <TextBox Name="txtFrameWidth"/>
+            <Button Content="Laske" Click="btnCalculate_Click"/>
+            <Label Content="Ikkunan pinta-ala (cm^2):"/>
+            <TextBox Name="txtWindowArea"/>
+            <Label Content="Lasin pinta-ala (cm^2):"/>
+            <TextBox Name="txtGlassArea"/>
+            <Label Content="Karmin piiri (cm):"/>
+            <TextBox Name="txtFramePerimeter"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,11 @@
+﻿<Window x:Class="HarviaControlPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Harvia Control Panel" Height="450" Width="800">
+    <Grid>
+        <Slider x:Name="TemperatureSlider" Minimum="0" Maximum="120" ValueChanged="TemperatureSlider_ValueChanged" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Label x:Name="TemperatureLabel" Content="Lämpötila: 0" HorizontalAlignment="Left" Margin="220,10,0,0" VerticalAlignment="Top"/>
+        <Slider x:Name="HumiditySlider" Minimum="0" Maximum="100" ValueChanged="HumiditySlider_ValueChanged" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="200"/>
+        <Label x:Name="HumidityLabel" Content="Kosteus: 0" HorizontalAlignment="Left" Margin="220,50,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

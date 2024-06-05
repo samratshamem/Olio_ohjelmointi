@@ -2,57 +2,51 @@
 
 class Kiuas
 {
-    private double lämpötila;
-    private double kosteus;
+    private bool _onkoPäälla;
+    private double _lampotila;
+    private double _kosteus;
 
     public Kiuas()
     {
-        this.lämpötila = 20; 
-        this.kosteus = 50;   
+        _onkoPäälla = false;
+        _lampotila = 20.0; 
+        _kosteus = 50.0; 
     }
 
-    public void KytkePäälle()
+    public void LaitaPäälle()
     {
+        _onkoPäälla = true;
         Console.WriteLine("Kiuas on päällä.");
     }
 
-    public void KytkePois()
+    public void LaitaPois()
     {
+        _onkoPäälla = false;
         Console.WriteLine("Kiuas on pois päältä.");
     }
 
-    public void AsetaLämpötila(double lämpötila)
+    public void KiuasLampotila(double lampotila)
     {
-        this.lämpötila = lämpötila;
-        Console.WriteLine($"Lämpötila asetettu: {lämpötila}°C.");
+        _lampotila = lampotila;
+        Console.WriteLine($"Lämpötila asetettu: {_lampotila}°C");
     }
 
-    public void AsetaKosteus(double kosteus)
+    public void KiuasKosteus(double kosteus)
     {
-        this.kosteus = kosteus;
-        Console.WriteLine($"Kosteus asetettu: {kosteus}%.");
-    }
-
-    public void NäytäTila()
-    {
-        Console.WriteLine($"Nykyinen lämpötila: {lämpötila}°C");
-        Console.WriteLine($"Nykyinen kosteus: {kosteus}%");
+        _kosteus = kosteus;
+        Console.WriteLine($"Kosteus asetettu: {_kosteus}%");
     }
 }
 
 class Ohjelma
 {
-    static void Main(string[] args)
+    static void Main()
     {
         Kiuas kiuas = new Kiuas();
 
-        kiuas.KytkePäälle();
-
-        kiuas.AsetaLämpötila(80);
-        kiuas.AsetaKosteus(70);
-
-        kiuas.NäytäTila();
-
-        
+        kiuas.LaitaPäälle();
+        kiuas.KiuasLampotila(80.0);
+        kiuas.KiuasKosteus(70.0);
+        kiuas.LaitaPois();
     }
 }

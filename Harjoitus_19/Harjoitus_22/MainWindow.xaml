@@ -1,0 +1,40 @@
+﻿<Window x:Class="WindowCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ikkunalaskuri" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Canvas Name="CanvasWindow" Grid.Column="0" Background="LightGray" Margin="10">
+            <!-- Ikkunan ja karmien piirto tapahtuu koodin puolella -->
+        </Canvas>
+
+        <StackPanel Grid.Column="1" Margin="10">
+            <TextBlock Text="Ikkunan Leveys (L)" Margin="5"/>
+            <TextBox Name="TextBoxWidth" Margin="5"/>
+
+            <TextBlock Text="Ikkunan Korkeus (H)" Margin="5"/>
+            <TextBox Name="TextBoxHeight" Margin="5"/>
+
+            <TextBlock Text="Karmipuun Leveys (W)" Margin="5"/>
+            <TextBox Name="TextBoxFrameWidth" Margin="5"/>
+
+            <Button Content="Laske" Click="ButtonCalculate_Click" Margin="5"/>
+
+            <TextBlock Text="Ikkunan Pinta-ala:" Margin="5"/>
+            <TextBlock Name="TextBlockWindowArea" Margin="5"/>
+
+            <TextBlock Text="Lasin Pinta-ala:" Margin="5"/>
+            <TextBlock Name="TextBlockGlassArea" Margin="5"/>
+
+            <TextBlock Text="Karmin Piiri:" Margin="5"/>
+            <TextBlock Name="TextBlockFramePerimeter" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfElevator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hissi" Height="200" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Kerroksen numero:"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="FloorInput"/>
+
+        <Button Grid.Column="0" Content="Siirry kerrokseen" Click="Button_Click" Grid.ColumnSpan="2" Margin="0,25,18,89" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="362" Grid.RowSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.095"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBlock Grid.Row="1" Name="FloorDisplay" Margin="10,74,0,0" Grid.ColumnSpan="2" RenderTransformOrigin="0.494,0.554"/>
+    </Grid>
+</Window>
